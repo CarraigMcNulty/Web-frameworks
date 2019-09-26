@@ -75,6 +75,10 @@ h4 small {
   margin-right:2px;
 }
 
+.in {
+  margin-top:12px;
+}
+
 legend {
   font-family: 'Lobster', cursive;
 }
