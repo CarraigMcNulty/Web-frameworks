@@ -83,3 +83,9 @@ h4 small {
 legend {
   font-family: 'Lobster', cursive;
 }
+
+.centered {
+  margin: auto;
+  width:  200px;
+  margin-top: 35%;
+}

@@ -2,17 +2,18 @@ extends layout
 
 include _includes/sharedHTMLfunctions
 
+
 block content
-  in
-    form
-     table
-      tr
-       td
-          | Username
-       td
-           input(type='text')
-      tr
-        td
-          | Password
-        td
-          input(type='password')
+  .centered
+      form
+        table
+          tr
+            td Username
+          tr
+            td
+              input(type='text')
+          tr
+            td Password
+          tr
+            td
+              input(type='password')
