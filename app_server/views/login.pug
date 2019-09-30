@@ -1,21 +1,25 @@
-extends layout
+extends loginlayout
 
 include _includes/sharedHTMLfunctions
 
 
-block content
-  .centered
-    form
-      h1 Login
-      br
-      table
-        tr
-          td Username
-        tr
-          td
-            input(type='text')
-        tr
-          td Password
-        tr
-          td
-            input(type='password')
+
+block content 
+  .logincontainer   
+    .centered
+      form
+        div
+          h1 Login
+          br
+          table
+            tr
+              td Username
+            tr
+              td
+                input(type='text')
+            tr
+              td Password
+            tr
+              td
+                input(type='password')
+
