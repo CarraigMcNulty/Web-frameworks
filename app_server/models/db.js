@@ -22,7 +22,7 @@ const gracefulShutdown = (msg, callback) => {
   });
 };
 
-// For nodemon restarts                                 
+// For nodemon restarts
 process.once('SIGUSR2', () => {
   gracefulShutdown('nodemon restart', () => {
     process.kill(process.pid, 'SIGUSR2');

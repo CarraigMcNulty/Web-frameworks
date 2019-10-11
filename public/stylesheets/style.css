@@ -1,23 +1,34 @@
-@import "/Fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+@import "https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap";
+@import "https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto&display=swap";
+
+
+@media only screen and (max-width: 991px)
+
+.logincontauef{
+background-color:white;
+
+}
+
 
 body {
-  font-family: "sans-serif", Arial, sans-serif;
+  font-family:'Merriweather Sans', "sans-serif", Arial, sans-serif;
   color: #ffffff;
-  background-image: url("../images/sunshine-rays-blue-sky-wallpaper-4.jpg") ; 
-  
+  background-image: url("../images/Regenschirm-3000x1524.jpg") ;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "sans-serifs", cursive;
+  font-family: 'Merriweather Sans', cursive;
 }
 
 .navbar {
-  background-color: #ad1d28;
+  background-color: rgba(115, 112, 112,.9);
   border-color: #911821;
 }
 
 .navbar-brand {
-  font-family: 'Rosario', cursive;
+  font-family: 'Roboto','Merriweather Sans', cursive;
 }
 
 .banner {
@@ -88,15 +99,22 @@ legend {
 .centered {
   float: left;
   width:  30px;
-  margin-top:65%;
+  margin-top:100vh;
   margin-left:auto;
-   
+
 }
 
 .logincontainer{
-  left:0;
-  background-color:rgba(192,192,192,.7) ;
+  background-color:rgba(255,77,77,.3) ;
   width:355px;
   height: 100vh;
-  padding: 30px;
+  margin-top:3rem;
+  padding-top:12rem;
+  padding-left:3rem;
+  padding-right:3rem;
+}
+
+
+centersign{
+  f
 }
