@@ -9,7 +9,7 @@ router.get('/location/review/new', ctrlUserWeather.addReview);
 
 /*Account Pages*/
 router.get('/',ctrlAccount.login );
-
+router.get('/signup',ctrlAccount.signup );
 
 
 module.exports = router;
