@@ -8,7 +8,8 @@ router.get('/location', ctrlUserWeather.locationInfo);
 router.get('/location/review/new', ctrlUserWeather.addReview);
 
 /*Account Pages*/
-router.get('/',ctrlAccount.login );
+router.get('/',ctrlUserWeather.userhome );
+router.get('/login',ctrlAccount.login );
 router.get('/signup',ctrlAccount.signup );
 
 

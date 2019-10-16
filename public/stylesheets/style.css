@@ -1,12 +1,11 @@
 @import "https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap";
 @import "https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto&display=swap";
+/*https://www.iconfinder.com/icons/1221018/daylight_sunny_sunshine_icon*/
 
-
-@media only screen and (max-width: 991px)
-
-.logincontauef{
-background-color:white;
-
+html body
+{
+  height:100%;
+  width:100%;
 }
 
 
@@ -15,6 +14,7 @@ body {
   color: #ffffff;
   background-image: url("../images/Regenschirm-3000x1524.jpg") ;
   background-size: cover;
+  background-repeat:no-repeat;
   overflow-x: hidden;
 }
 
@@ -80,13 +80,13 @@ h4 a, h4 a:hover {
 
 h4 small {
   font-size: 60%;
-  line-height: 200%;
+  line-height: 200%;fdsfedsd
   color: #aaa;
 }
 
 .address {
   margin-bottom: 0.5rem;
-}
+} fdf
 
 .facilities span.badge {
   margin-right:2px;
@@ -96,25 +96,54 @@ legend {
   font-family: 'Lobster', cursive;
 }
 
-.centered {
-  float: left;
-  width:  30px;
-  margin-top:100vh;
-  margin-left:auto;
+.background{
+  background-color:rgba(224, 224, 224,.3);
+  width:355px;
+  height: 100vh;
+  margin-top:3rem;
+
+  margin-left: 0;
+  text-shadow:
+ -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+   1px 1px 0 #000;
 
 }
 
+.centered  {
+  background-color:rgba(224, 224, 224,.3);
+  width: 30em;
+  margin:10% auto;
+  padding:5em;
+  text-shadow:
+ -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+
 .logincontainer{
-  background-color:rgba(255,77,77,.3) ;
+  background-color:rgba(224, 224, 224,.3);
   width:355px;
   height: 100vh;
   margin-top:3rem;
   padding-top:12rem;
   padding-left:3rem;
   padding-right:3rem;
+  text-shadow:
+ -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+   1px 1px 0 #000;
 }
 
-
-centersign{
-  f
+.alternate1
+{
+  background-color:rgba(123, 255, 0,.3);
+  height:15vh;
+  width:100%;
+  padding-left:3rem;
+  padding-right:3rem;
+  margin:none;
 }

@@ -29,6 +29,11 @@ const homelist = function(req, res){
   });
 };
 
+const userhome= function(req, res){
+  res.render('userhome', { title: 'userhome' });
+};
+
+
 /* GET 'Location info' page */
 const locationInfo = function(req, res){
   res.render('location-info', {
@@ -89,5 +94,7 @@ const addReview = function(req, res){
 module.exports = {
   homelist,
   locationInfo,
-  addReview
+  addReview,
+  userhome
+
 };
