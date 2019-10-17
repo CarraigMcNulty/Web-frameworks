@@ -4,8 +4,7 @@
 
 html body
 {
-  height:100%;
-  width:100%;
+  
 }
 
 
@@ -80,13 +79,13 @@ h4 a, h4 a:hover {
 
 h4 small {
   font-size: 60%;
-  line-height: 200%;fdsfedsd
+  line-height: 200%;
   color: #aaa;
 }
 
 .address {
   margin-bottom: 0.5rem;
-} fdf
+} 
 
 .facilities span.badge {
   margin-right:2px;
@@ -101,7 +100,7 @@ legend {
   width:355px;
   height: 100vh;
   margin-top:3rem;
-
+  float: left;
   margin-left: 0;
   text-shadow:
  -1px -1px 0 #000,
