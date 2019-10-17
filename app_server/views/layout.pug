@@ -9,13 +9,15 @@ html
   body
     nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
       .container
+        Label.mr Namespace
         button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
-          span.navbar-toggler-icon
-        a.navbar-brand(href='/ ') Weather
+          span.navbar-toggler-icon.mr-5
+        a.navbar-brand.ml-5(href='/ ') Weather
         #navbarMain.navbar-collapse.collapse
-          ul.navbar-nav.mr-auto
+          ul.navbar-nav
             li.nav-item
-              a.nav-link(href='/about/') About 
+              a.nav-link.float-left(href='/about/') About 
+              a.nav-link.float-left(href='/locations/new') Add Location             
     .container
       block content
       footer

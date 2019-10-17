@@ -33,6 +33,10 @@ const userhome= function(req, res){
   res.render('userhome', { title: 'userhome' });
 };
 
+const newlocation= function(req, res){
+  res.render('newlocation', { title: 'newlocation' });
+};
+
 
 /* GET 'Location info' page */
 const locationInfo = function(req, res){
@@ -95,6 +99,7 @@ module.exports = {
   homelist,
   locationInfo,
   addReview,
-  userhome
+  userhome,
+  newlocation,
 
 };

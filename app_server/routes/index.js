@@ -5,7 +5,7 @@ const ctrlAccount = require('../controllers/account');
 
 /* User Weather pages */
 router.get('/location', ctrlUserWeather.locationInfo);
-router.get('/location/review/new', ctrlUserWeather.addReview);
+router.get('/locations/new', ctrlUserWeather.newlocation);
 
 /*Account Pages*/
 router.get('/',ctrlUserWeather.userhome );
