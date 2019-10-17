@@ -2,10 +2,7 @@
 @import "https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto&display=swap";
 /*https://www.iconfinder.com/icons/1221018/daylight_sunny_sunshine_icon*/
 
-html body
-{
-  
-}
+
 
 
 body {
@@ -24,11 +21,14 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   background-color: rgba(115, 112, 112,.9);
   border-color: #911821;
+  position: relative;
+  
 }
 
 .navbar-brand {
   font-family: 'Roboto','Merriweather Sans', cursive;
 }
+
 
 .banner {
   margin-top: 4em;
@@ -43,6 +43,7 @@ h1 small {
 
 .card {
   background-color: #469ea8;
+  width:20em;
 }
 
 .card-primary {
@@ -99,7 +100,7 @@ legend {
   background-color:rgba(224, 224, 224,.3);
   width:355px;
   height: 100vh;
-  margin-top:3rem;
+  
   float: left;
   margin-left: 0;
   text-shadow:
@@ -107,8 +108,16 @@ legend {
   1px -1px 0 #000,
   -1px 1px 0 #000,
    1px 1px 0 #000;
+   
 
 }
+
+.background h1 {
+  margin-bottom:4.5rem;
+
+
+}
+
 
 .centered  {
   background-color:rgba(224, 224, 224,.3);
