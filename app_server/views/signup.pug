@@ -1,4 +1,4 @@
-extends layout
+extends loginlayout
 
 include _includes/sharedHTMLfunctions
 
@@ -32,7 +32,11 @@ block content
           td Confirm Password 
           td
            input(type='password')
-         tr          
-        p(style='text-align:center; margin-top:1em;')
-         input(type='submit' value='Sign Up')
+         
+        .col.ml-2       
+          p(style='text-align:center; margin-top:1em;')
+            input(type='submit' value='Sign Up')
+            br
+            .small(style='color:white;text-align:center;') Already signed up?
+            a.btn.col-12(style='color:white; text-decoration:underline;')(href='/login') Login
               

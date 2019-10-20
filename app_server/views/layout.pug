@@ -5,18 +5,21 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/weather-icons.min.css')
+    link(rel='stylesheet', href='/stylesheets/weather-icons.css')
+    link(rel='stylesheet', href='/stylesheets/weather-icons.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+
   body
     nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
       .container
-        Label.mr Namespace
+        Label.mr=username
         button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
           span.navbar-toggler-icon.mr-5
         a.navbar-brand.ml-5(href='/ ') Weather
         #navbarMain.navbar-collapse.collapse
           ul.navbar-nav
             li.nav-item
-              a.nav-link.float-left(href='/about/') About 
               a.nav-link.float-left(href='/locations/new') Add Location             
     .container
       block content

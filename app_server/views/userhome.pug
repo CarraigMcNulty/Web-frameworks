@@ -5,134 +5,36 @@ include _includes/sharedHTMLfunctions
 block content
   .row.mr-3
     .col-0
-      .background
-        h1.mt-5 Login
-        a.btn.btn-primary(href='/login') Add location
+      .background(style="height:100vh;")
+        h1.mt-5=pageheader.title
+        a.btn.mb-3.ml-5.btn-primary(href='/login') Add location
         br
-        .row.m-b-5
-          .col-10
+        .row.mb-5
+          .col-12
           ul.MT-5(style=" width:100%;list-style:none; margin-right:15%;")
-           .alternate1
-            li.mb-5 Galway
-           li.mb-5 fds
-           li.mb-5 fds
-           li.mb-5 fds
+           each place in savedLocations  
+            li.mb-5=place
+            
 
-    .col       
-      .col.mt-5
-        .card.card-primary.review-card.float-left.mr-2
-          .card-block
-            h2.card-title Monday
-            .row.review
-              .col-12.no-gutters.review-header
-                span.rating
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star-o
-                  i.fa.fa-star-o
-                small.reviewTimestamp 16 February 2017
-              .col-12
-                p What a great place. I can&apos;t say enough good things about it.  
 
+
+    .col.mt-5 
+
+      each day in days   
         .col
-        .card.card-primary.review-card.float-left.mr-2
-          .card-block
-            h2.card-title Tuesday
-            .row.review
-              .col-12.no-gutters.review-header
-                span.rating
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star-o
-                  i.fa.fa-star-o
-                small.reviewTimestamp 16 February 2017
-              .col-12
-                p What a great place. I can&apos;t say enough good things about it.  
-                
-        .col
-        .card.card-primary.review-card.float-left.mr-2
-          .card-block
-            h2.card-title  Wednesday
-            .row.review
-              .col-12.no-gutters.review-header
-                span.rating
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star-o
-                  i.fa.fa-star-o
-                small.reviewTimestamp 16 February 2017
-              .col-12
-                p What a great place. I can&apos;t say enough good things about it.  
-                
-        .col
-        .card.card-primary.review-card.float-left.mr-2
-          .card-block
-            h2.card-title  Thursday
-            .row.review
-              .col-12.no-gutters.review-header
-                span.rating
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star
-                  i.fa.fa-star-o
-                  i.fa.fa-star-o
-                small.reviewTimestamp 16 February 2017
-              .col-12
-                p What a great place. I can&apos;t say enough good things about it.  
-
-      .clearfix
-
-      .col  
-        .col.mt-5
-          .card.card-primary.review-card.float-left.mr-2.mt-4
-            .card-block
-              h2.card-title Friday
-              .row.review
-                .col-12.no-gutters.review-header
-                  span.rating
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star-o
-                    i.fa.fa-star-o
-                  .reviewTimestamp.float-right  16 February 2017
-                .col-12
-                  p What a great place. I can&apos;t say enough good things about it.  
-                  
-        .col.mt-4
           .card.card-primary.review-card.float-left.mr-2
             .card-block
-              h2.card-title Saturday
+              h2.card-title=day.dayName
               .row.review
                 .col-12.no-gutters.review-header
                   span.rating
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star-o
-                    i.fa.fa-star-o
-                  .reviewTimestamp.float-right  16 February 2017
+                    i.wi.wi-day-sunny
+                    
+                  small.reviewTimestamp 16 February 2017
                 .col-12
-                  p What a great place. I can&apos;t say enough good things about it.  
+                  p=day.weatherDesc  
 
-        .col-0
-          .card.card-primary.review-card.float-left.mr-2
-            .card-block
-              h2.card-title Sunday
-              .row.review
-                .col-12.no-gutters.review-header
-                  span.rating
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star
-                    i.fa.fa-star-o
-                    i.fa.fa-star-o
-                  .reviewTimestamp.float-right 16 February 2017
-                .col-12
-                  p What a great place. I can&apos;t say enough good things about it.  
-                
+      
+
                 
   

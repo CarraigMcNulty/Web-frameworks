@@ -2,22 +2,33 @@ extends loginlayout
 
 include _includes/sharedHTMLfunctions
 
-            block content
-              .logincontainer
-               form
-                h1 Login
-                br
-                table
-                 tr
+block content
+  .row.mr-3
+    .col-0
+      .logincontainer.ml-2(style="height=100%;")
+        .col.mb-4
+          h1.ml-4.mb-3 Login
+          br
+          form.ml-2
+            table.ml-4
+              .col
+                tr.mr-1
                   td Username
-                 tr
+                tr
                   td
-                   input(type='text')
-                 tr
+                    input(type='text')
+                tr
                   td Password
-                 tr
+                tr
                   td
-                   input(type='password')  
-                
-                p(style='margin-top:1em;')
-                 input(type='submit' value='Login')
+                    input(type='password')  
+                tr
+                  td(style='text-align:center;')
+                    input.mt-4.mb-3(style='text-align:center;')(type='submit' value='Login')  
+                tr
+                  td
+                    .small(style='color:white;text-align:center;') No Account?
+                    a.btn.col-12(style='color:white; text-decoration:underline; margin-bottom:100vh;')(href='/signup') Sign Up
+
+    
+    

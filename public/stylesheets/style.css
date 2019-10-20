@@ -2,17 +2,21 @@
 @import "https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto&display=swap";
 /*https://www.iconfinder.com/icons/1221018/daylight_sunny_sunshine_icon*/
 
-
-
-
 body {
   font-family:'Merriweather Sans', "sans-serif", Arial, sans-serif;
   color: #ffffff;
   background-image: url("../images/Regenschirm-3000x1524.jpg") ;
+  background-position: center;
   background-size: cover;
   background-repeat:no-repeat;
   overflow-x: hidden;
+  height: 100%;
 }
+
+img{
+  height: 100%;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Merriweather Sans', cursive;
@@ -70,8 +74,9 @@ h1 small {
 }
 
 .badge-default, .btn-primary {
-  background-color: #ad1d28;
-  border-color: #911821;
+  background-color: rgb(163, 0, 87);
+  border-color: #f7f7f7;
+  
 }
 
 h4 a, h4 a:hover {
@@ -113,9 +118,12 @@ legend {
 }
 
 .background h1 {
-  margin-bottom:4.5rem;
+  margin-bottom:1.8rem;
+}
 
-
+.background ul li {
+  height:15vh;
+  padding-top:16px;
 }
 
 
@@ -124,7 +132,7 @@ legend {
   width: 30em;
   margin:10% auto;
   padding:5em;
-  
+  height: 100%;
   margin-top:3rem;
   text-shadow:
  -1px -1px 0 #000,
@@ -135,18 +143,18 @@ legend {
 
 .logincontainer{
   background-color:rgba(224, 224, 224,.3);
-  width:355px;
-  height: 100%;
-  margin-top:3rem;
-  padding-top:12rem;
-  padding-left:3rem;
-  padding-right:3rem;
+  width:400px;
+  height:100%;
+
   text-shadow:
  -1px -1px 0 #000,
   1px -1px 0 #000,
   -1px 1px 0 #000,
    1px 1px 0 #000;
 }
+
+.logincontainer h1{
+  padding-top:20%}
 
 .alternate1
 {

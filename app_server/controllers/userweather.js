@@ -1,40 +1,69 @@
-/* GET 'home' page */
-const homelist = function(req, res){
-  res.render('locations-list', {
-    title: 'Loc8r - find a place to work with wifi',
-    pageHeader: {
-      title: 'Loc8r',
-      strapline: 'Find places to work with wifi near you!'
+
+const userhome= function(req, res){
+  res.render('userhome', { username: 'User', pageheader: { 
+    title: 'My Locations', 
+    strapline: 'Find places to work with wifi near you!' 
     },
-    sidebar: "Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.",
-    locations: [{
-        name: 'Starcups',
-        address: '125 High Street, Reading, RG6 1PS',
-        rating: 3,
-        facilities: ['Hot drinks', 'Food', 'Premium wifi'],
-        distance: '100m'
-    }, {
-        name: 'Cafe Hero',
-        address: '125 High Street, Reading, RG6 1PS',
-        rating: 4,
-        facilities: ['Hot drinks', 'Food', 'Premium wifi'],
-        distance: '200m'
-    }, {
-        name: 'Burger Queen',
-        address: '125 High Street, Reading, RG6 1PS',
-        rating: 2,
-        facilities: ['Food', 'Premium wifi'],
-        distance: '250m'
-    }]
+
+    days: [   
+  {
+    dayName: 'Monday',
+    iconInfo: 'Sunny',
+    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
+  },
+
+  {
+    dayName: 'Tuesday',
+    iconInfo: 'Sunny',
+    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
+  },
+
+  {
+    dayName: 'Wednesday',
+    iconInfo: 'Sunny',
+    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
+  },
+
+  {
+    dayName: 'Thursday',
+    iconInfo: 'Sunny',
+    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
+  },
+
+  {
+    dayName: 'Friday',
+    iconInfo: 'Sunny',
+    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
+  },
+
+  {
+    dayName: 'Saturday',
+    iconInfo: 'Sunny',
+    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
+  },
+
+  {
+    dayName: 'Sunday',
+    iconInfo: 'Sunny',
+    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
+  },
+    ], 
+
+  savedLocations: 
+  [
+    'galway',
+    'tralee',
+    'dingle'
+
+  ]
+
   });
 };
 
-const userhome= function(req, res){
-  res.render('userhome', { title: 'userhome' });
-};
-
 const newlocation= function(req, res){
-  res.render('newlocation', { title: 'newlocation' });
+  res.render('newlocation', {
+     title: 'newlocation', username: 'User'},
+  );
 };
 
 
@@ -87,18 +116,11 @@ const locationInfo = function(req, res){
   });
 };
 
-/* GET 'Add review' page */
-const addReview = function(req, res){
-  res.render('location-review-form', {
-    title: 'Review Starcups on Loc8r',
-    pageHeader: { title: 'Review Starcups' }
-  });
-};
+
 
 module.exports = {
-  homelist,
+  
   locationInfo,
-  addReview,
   userhome,
   newlocation,
 
