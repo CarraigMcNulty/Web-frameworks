@@ -7,7 +7,7 @@ block content
     .col-0
       .background(style="height:100vh;")
         h1.mt-5=pageheader.title
-        a.btn.mb-3.ml-5.btn-primary(href='/login') Add location
+        a.btn.mb-3.ml-5.btn-primary(href='/locations/new') Add location
         br
         .row.mb-5
           .col-12
@@ -30,7 +30,7 @@ block content
                   span.rating
                     i.wi.wi-day-sunny
                     
-                  small.reviewTimestamp 16 February 2017
+                  label.small.reviewTimestamp 16 February 2017
                 .col-12
                   p=day.weatherDesc  
 

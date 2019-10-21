@@ -2,7 +2,6 @@
 const userhome= function(req, res){
   res.render('userhome', { username: 'User', pageheader: { 
     title: 'My Locations', 
-    strapline: 'Find places to work with wifi near you!' 
     },
 
     days: [   
@@ -61,10 +60,12 @@ const userhome= function(req, res){
 };
 
 const newlocation= function(req, res){
-  res.render('newlocation', {
-     title: 'newlocation', username: 'User'},
-  );
-};
+  res.render('newlocation', { pageHeader: {
+     title: 'New Location',
+     username: 'User'},
+    
+    });
+};  
 
 
 /* GET 'Location info' page */

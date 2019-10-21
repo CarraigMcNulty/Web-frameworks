@@ -7,18 +7,20 @@ block content
     .col-0
       .logincontainer.ml-2(style="height=100%;")
         .col.mb-4
-          h1.ml-4.mb-3 Login
+          h1.ml-4.mb-3=pageHeader.title
           br
           form.ml-2
             table.ml-4
               .col
                 tr.mr-1
-                  td Username
+                  td 
+                    label Username
                 tr
                   td
                     input(type='text')
                 tr
-                  td Password
+                  td
+                   label Password
                 tr
                   td
                     input(type='password')  
@@ -27,7 +29,7 @@ block content
                     input.mt-4.mb-3(style='text-align:center;')(type='submit' value='Login')  
                 tr
                   td
-                    .small(style='color:white;text-align:center;') No Account?
+                    label.small(style='color:white;text-align:center;') No Account?
                     a.btn.col-12(style='color:white; text-decoration:underline; margin-bottom:100vh;')(href='/signup') Sign Up
 
     

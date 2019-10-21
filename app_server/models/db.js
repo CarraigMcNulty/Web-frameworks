@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-let dbURI = 'mongodb://localhost/Loc8r';
+let dbURI = 'mongodb://localhost/weather';
+
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI;
 }
