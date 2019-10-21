@@ -1,6 +1,21 @@
 const mongoose = require('mongoose');
 let dbURI = 'mongodb://localhost/weather';
 
+var options = {
+  useMongoClient: true,
+  socketTimeoutMS: 0,
+  keepAlive: true,
+  reconnectTries: 30
+};
+
+
+if (process.env.NODE_ENV === 'production') {
+dbURI = process.env.MONGODB_URI;
+}
+
+
+mongoose.connect(dbURI, options);
+
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI;
 }
@@ -42,4 +57,4 @@ process.on('SIGTERM', () => {
   });
 });
 
-require('./locations');
+require('./users');

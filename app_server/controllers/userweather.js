@@ -53,7 +53,6 @@ const userhome= function(req, res){
     'galway',
     'tralee',
     'dingle'
-
   ]
 
   });
