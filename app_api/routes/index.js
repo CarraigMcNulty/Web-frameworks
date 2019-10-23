@@ -5,8 +5,8 @@ const ctrlUserWeather= require('../controller/userweather');
 const ctrlAccount = require('../controller/account');
 // usera
 router
-  .route('/:userid/:locationid')
-  .get(ctrlUserWeather.locationsReadOne);
+  .route('/:userid')
+  .get(ctrlAccount.usersReadOne);
   
 router
     .route('/:userid/locations/new')
@@ -27,4 +27,4 @@ router
 
 
     
-module.exports = router;
+ module.exports = router;

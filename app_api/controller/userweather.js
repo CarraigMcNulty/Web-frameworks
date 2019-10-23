@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
 const acc = mongoose.model('user');
+var ObjectID = require('mongodb').ObjectID;
 
 const locationsCreate = function (req, res) {res
   .status(200)
   .json({"status" : "success"});
    };
-
-
 
    const locationsReadOne = function (req, res) {
     if (req.params && req.params.userid && req.params.locationid) {
