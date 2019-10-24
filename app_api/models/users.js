@@ -9,7 +9,7 @@ const daySchema = new mongoose.Schema({
 
 const locationSchema = new mongoose.Schema({
     
-    _id: String,
+    
     locationName:String,
     coords: {
         type: [Number],
@@ -21,10 +21,10 @@ const locationSchema = new mongoose.Schema({
   });
 
 const userSchema = new mongoose.Schema({
-    _id: String,
+    
     Name: String,
     Password: String,
-    savedLocations: [locationSchema],
+    savedLocations: [locationSchema]
 
   });
   

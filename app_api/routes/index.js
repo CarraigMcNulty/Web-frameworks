@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const ctrlUserWeather= require('../controller/userweather');
 const ctrlAccount = require('../controller/account');
-// usera
+
 router
   .route('/:userid')
   .get(ctrlAccount.usersReadOne);
@@ -14,13 +14,13 @@ router
     .post(ctrlUserWeather.locationsCreate);
     
 router
-    .route('/login')
-    .get(ctrlAccount.usersReadOne);
+    .route('/user')
+   // .post(ctrlAccount.newUser);
   
  
 
 router
-    .route('/signup')
+   .route('/signup')
    .get(ctrlAccount.usersReadOne)
    .post(ctrlAccount.usersCreate);
 
