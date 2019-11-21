@@ -1,10 +1,19 @@
+const apiOptions = { 
+  server : 'http://localhost:3000' 
+  }; 
 
-const userhome= function(req, res){
+
+const request = require('request');
+
+
+const _renderHomepage = function(req, res,responseBody){
   res.render('userhome', { username: 'User', pageheader: { 
     title: 'My Locations', 
     },
 
-    days: [   
+    days: responseBody.days,
+    savedLocations: responseBody.savedLocations
+  /*  days: [   
   {
     dayName: 'Monday',
     iconInfo: 'Sunny',
@@ -53,10 +62,31 @@ const userhome= function(req, res){
     'galway',
     'tralee',
     'dingle'
-  ]
+  ]*/
 
   });
 };
+
+const userhome = function(req, res){
+   
+  const path = `/api/${req.params.userid}`;
+  console.log("here");
+  const requestOptions = { 
+  url : apiOptions.server + path, 
+  method : 'GET', 
+  json : {}, 
+  
+  }; 
+  request(requestOptions, (err, response, body) => {
+    console.log("here"); 
+  _renderHomepage(req, res ,body); 
+  } 
+  );
+  };
+  
+  
+
+
 
 const newlocation= function(req, res){
   res.render('newlocation', { pageHeader: {
