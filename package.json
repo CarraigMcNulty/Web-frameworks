@@ -1,5 +1,5 @@
 {
-  "name": "loc8r",
+  "name": "Web-Frameworks",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -18,5 +18,9 @@
     "request": "^2.88.0",
     "save": "^2.4.0",
     "serve-favicon": "~2.3.0"
+  },
+  "engines": {
+    "node": "^12.10.0",
+    "npm": "^6.10.3"
   }
 }
