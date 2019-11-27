@@ -1,10 +1,11 @@
-const apiOptions = { 
+
+const request = require('request');const apiOptions = { 
   server : 'http://localhost:3000' 
   }; 
 
-
-const request = require('request');
-
+ if (process.env.NODE_ENV === 'production') { 
+    apiOptions.server = 'https://stark-hollows-05623.herokuapp.com'; 
+    }
 
 const _renderHomepage = function(req, res,responseBody){
   res.render('userhome', { username: 'User', pageheader: { 
