@@ -5,7 +5,7 @@
 body {
   font-family:'Merriweather Sans', "sans-serif", Arial, sans-serif;
   color: #ffffff;
-  background-image: url("../images/Regenschirm-3000x1524.jpg") ;
+  background-image: url("/images/Regenschirm-3000x1524.jpg") ;
   background-position: center;
   background-size: cover;
   background-repeat:no-repeat;
