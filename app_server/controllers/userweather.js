@@ -8,12 +8,14 @@ const request = require('request');const apiOptions = {
     }
 
 const _renderHomepage = function(req, res,responseBody){
+  console.log(responseBody.savedLocations[0].days);
+    
   res.render('userhome', { username: 'User', pageheader: { 
     title: 'My Locations', 
     },
 
-    days: responseBody.days,
-    savedLocations: responseBody.savedLocations
+    savedLocations: responseBody.savedLocations,
+    days: responseBody.savedLocations[0].days
   /*  days: [   
   {
     dayName: 'Monday',
@@ -71,7 +73,7 @@ const _renderHomepage = function(req, res,responseBody){
 const userhome = function(req, res){
    
   const path = `/api/${req.params.userid}`;
-  console.log("here");
+  console.log("a");
   const requestOptions = { 
   url : apiOptions.server + path, 
   method : 'GET', 
@@ -79,7 +81,7 @@ const userhome = function(req, res){
   
   }; 
   request(requestOptions, (err, response, body) => {
-    console.log("here"); 
+    console.log("b"); 
   _renderHomepage(req, res ,body); 
   } 
   );

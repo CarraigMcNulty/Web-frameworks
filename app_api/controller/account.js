@@ -7,8 +7,8 @@ const usersCreate = function (req, res) { res
   .json({"status" : "success"});
   };
 
-const usersReadOne = function (req, res) {res
-  res		
+const usersReadOne = function (req, res) {
+  console.log('aaaa')	
   if (req.params && req.params.userid) {
     Acc
       .findById(req.params.userid)
@@ -39,9 +39,11 @@ const usersReadOne = function (req, res) {res
   }
 };
 
-module.exports.newUser = function(req, res){
+const newUser = function(req, res){
+  console.log('here');
   Acc.create({
-      Name : req.body.name,
+      Name : req.body.Name,
+      Password : req.body.Password
   }, 
   function(err, meal) {
       if (err) {
@@ -60,7 +62,8 @@ var sendJsonResponse = function(res, status, content){
 
 module.exports = {
   usersReadOne,
-  usersCreate
+  usersCreate,
+  newUser
 };
 
 

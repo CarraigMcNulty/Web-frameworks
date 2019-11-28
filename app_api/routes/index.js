@@ -15,7 +15,7 @@ router
     
 router
     .route('/user')
-   // .post(ctrlAccount.newUser);
+    .post(ctrlAccount.newUser);
   
  
 
