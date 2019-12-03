@@ -8,72 +8,33 @@ const request = require('request');const apiOptions = {
     }
 
 const _renderHomepage = function(req, res,responseBody){
- console.log( responseBody.savedLocations[1]['location_name']);
- console.log( responseBody.savedLocations);
-  //locN =new array{};
+ 
+  loc = responseBody.savedLocations;
+ nolocations = [{dayname:"No Locations Added"}];
+
+  if(responseBody.savedLocations.length == 0)
+  {
+    days = nolocations;
+  }
+
+  else
+  {
     
+    days = responseBody.savedLocations[0]['days'];
+  }
+
+
+
   res.render('userhome', { username: 'User', pageheader: { 
     title: 'My Locations', 
     },
-    
     savedLocations: responseBody.savedLocations,
-    days: responseBody.savedLocations[0]['days']
-  /*  days: [   
-  {
-    dayName: 'Monday',
-    iconInfo: 'Sunny',
-    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
-  },
-/*
-  {
-    dayName: 'Tuesday',
-    iconInfo: 'Sunny',
-    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
-  },
-
-  {
-    dayName: 'Wednesday',
-    iconInfo: 'Sunny',
-    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
-  },
-
-  {
-    dayName: 'Thursday',
-    iconInfo: 'Sunny',
-    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
-  },
-
-  {
-    dayName: 'Friday',
-    iconInfo: 'Sunny',
-    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
-  },
-
-  {
-    dayName: 'Saturday',
-    iconInfo: 'Sunny',
-    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
-  },
-
-  {
-    dayName: 'Sunday',
-    iconInfo: 'Sunny',
-    weatherDesc: 'The sun is shining, the tank is clean and were getting outt...'
-  },
-    ], 
-
-  savedLocations: 
-  [
-    'galway',
-    'tralee',
-    'dingle'
-  ]*/
+    days: days
 
   });
 };
 
 const userhome = function(req, res){
-   
   const path = `/api/${req.params.userid}`;
   console.log("a");
   const requestOptions = { 

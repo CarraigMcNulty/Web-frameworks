@@ -9,7 +9,13 @@ const ctrlOther = require('../controllers/other');
 /*Account Pages*/
 router.get('/login',ctrlAccount.login );
 router.get('/',ctrlAccount.login );
-router.get('/signup',ctrlAccount.signup );
+
+router
+.route('/signup')
+.get(ctrlAccount.signup)
+.post(ctrlAccount.userSignUp)
+
+
 router.get('/about',ctrlOther.About );
 
 /* User Weather pages */

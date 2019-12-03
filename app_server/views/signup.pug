@@ -5,7 +5,7 @@ include _includes/sharedHTMLfunctions
 block content
    div(style = "text-align:centered")
      .centered
-      form
+      form(action="", method="post")
         h1(style='text-align: center')=pageHeader.title
         br
         p(style='text-align: center')
@@ -15,16 +15,16 @@ block content
          tr
           td Name 
           td
-           input(type='text')
+           input(name="name" type='text')
          tr
           td Surname 
           td
-           input(type='password')
+           input(name= "Sname" type='text')
          tr
           td 
             label Email 
           td
-           input(type='password')
+           input(name= 'email' type='email')
          tr
           td Password 
           td
@@ -32,12 +32,12 @@ block content
          tr
           td Confirm Password 
           td
-           input(type='password')
+           input(name= 'password'  type='password')
          
         .col.ml-2       
           p(style='text-align:center; margin-top:1em;')
             input(type='submit' value='Sign Up')
             br
             small(style='color:white;text-align:center;') Already signed up?
-            a.btn.col-12(style='color:white; text-decoration:underline;')(href='/login') Login
+            a.btn.disabled.col-12(style='color:white; text-decoration:underline;')(href='/login') Login
               

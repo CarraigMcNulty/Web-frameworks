@@ -21,8 +21,8 @@ router
 
 router
    .route('/signup')
-   .get(ctrlAccount.usersReadOne)
-   .post(ctrlAccount.usersCreate);
+   //.get(ctrlAccount.usersReadOne)
+   .post(ctrlAccount.newUser);
 
 
 

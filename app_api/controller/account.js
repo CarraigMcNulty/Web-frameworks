@@ -40,17 +40,18 @@ const usersReadOne = function (req, res) {
 };
 
 const newUser = function(req, res){
-  console.log('here');
+  console.log(req.body.name);
   Acc.create({
-      Name : req.body.Name,
-      Password : req.body.Password
-  }, 
-  function(err, meal) {
+      name : req.body.name,
+      password : req.body.password
+      
+    }, 
+  function(err, user) {
       if (err) {
           sendJsonResponse(res, 403, err);
       }
       else {
-          sendJsonResponse(res, 203, meal);
+          sendJsonResponse(res, 201, user);
       }
   });
 }
