@@ -8,14 +8,14 @@ const request = require('request');const apiOptions = {
     }
 
 const _renderHomepage = function(req, res,responseBody){
-  console.log(responseBody.savedLocations[0].days);
+  console.log(responseBody.savedLocations[0].days) ;
     
   res.render('userhome', { username: 'User', pageheader: { 
     title: 'My Locations', 
     },
 
     savedLocations: responseBody.savedLocations,
-    days: responseBody.savedLocations[0].days
+    days: responseBody.savedLocations.days
   /*  days: [   
   {
     dayName: 'Monday',
