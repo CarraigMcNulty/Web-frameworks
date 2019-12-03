@@ -8,6 +8,7 @@ const ctrlOther = require('../controllers/other');
 
 /*Account Pages*/
 router.get('/login',ctrlAccount.login );
+router.get('/',ctrlAccount.login );
 router.get('/signup',ctrlAccount.signup );
 router.get('/about',ctrlOther.About );
 
