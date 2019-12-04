@@ -20,21 +20,25 @@ const usersReadOne = function (req, res) {
               "message": "userid not found"
             });	 
           return;
-        } else if (err) {
+        } 
+        else if (err) {
           res	
             .status(404) 
             .json(err); 
           return; 	
         }
-        res		
+        else
+        {
+          res		
           .status(200)
           .json(user);
+        }
       });
   } else {		
     res		
       .status(404) 	
       .json({	
-        "message": "No recipeid in request"
+        "message": "No userid in request"
       });		
   }
 };
@@ -44,7 +48,8 @@ const newUser = function(req, res){
   console.log(req.body.password);
   Acc.create({
       name : req.body.name,
-      password : req.body.password
+      password : req.body.password,
+      email: req.body.email
       
     }, 
   function(err, user) {

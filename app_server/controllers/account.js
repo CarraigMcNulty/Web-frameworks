@@ -48,7 +48,8 @@ const userSignUp = function(req, res){
   const path = `/api/signup`; 
   const postdata = { 
   name: req.body.name+" " +req.body.Sname, 
-  password: req.body.password
+  password: req.body.password,
+  email: req.body.email
   }; 
 
   const requestOptions = {
@@ -66,8 +67,6 @@ const userSignUp = function(req, res){
   }
   );
 };
-
-
 
 module.exports = {
   login,

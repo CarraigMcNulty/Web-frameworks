@@ -39,7 +39,8 @@ const locationsCreate = function (req, res) {res
               response = {
                 user : {
                   name : user.name,
-                  id : req.params.userid
+                  id : req.params.userid,
+                  email : req.params.email
                 },
                 savedlocations : locations
               };
