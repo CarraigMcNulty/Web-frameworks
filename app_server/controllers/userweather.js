@@ -31,14 +31,15 @@ const _renderHomepage = function(req, res,responseBody){
  
   loc = responseBody.savedLocations;
  nolocations = [{dayname:"No Locations Added"}];
-console.log(loc);
+
+
   if(responseBody.savedLocations == undefined || responseBody.savedLocations.length == 0 )
   {
     days = nolocations;
   }
+
   else
-  {
-    
+  {  
     days = responseBody.savedLocations[0]['days'];
   }
 
@@ -48,9 +49,7 @@ console.log(loc);
     savedLocations: responseBody.savedLocations,
     days: days,
     username : responseBody.name
-
-  });
-    
+  });   
 };
 
 const userhome = function(req, res){
@@ -60,17 +59,18 @@ const userhome = function(req, res){
   url : apiOptions.server + path, 
   method : 'GET', 
   json : {}, 
-  
   }; 
+
+
   request(requestOptions, (err, response, body) => {
     console.log("b"); 
     if(response.statusCode === 200)
-      {
-        _renderHomepage(req, res ,body); 
-      }
+   {
+      _renderHomepage(req, res ,body); 
+   }
+
     else
-    {
-      
+    { 
         _showError(req, res, response.statusCode );
     }    
   } 
