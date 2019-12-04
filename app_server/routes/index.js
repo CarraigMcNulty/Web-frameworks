@@ -10,10 +10,8 @@ const ctrlOther = require('../controllers/other');
 router.get('/login',ctrlAccount.login );
 router.get('/',ctrlAccount.login );
 
-router
-.route('/signup')
-.get(ctrlAccount.signup)
-.post(ctrlAccount.userSignUp)
+router.get('/signup',ctrlAccount.signup)
+router.post('/signup',ctrlAccount.userSignUp)
 
 
 router.get('/about',ctrlOther.About );

@@ -23,7 +23,7 @@ const locationSchema = new mongoose.Schema({
 const userSchema = new mongoose.Schema({
     
     name:{ type: String, required: true},
-    passwordname:{ type: String, required: true},
+    password:{ type: String, required: true},
     savedLocations: [locationSchema]
 
   });

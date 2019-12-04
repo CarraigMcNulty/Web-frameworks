@@ -11,11 +11,12 @@ const _renderHomepage = function(req, res,responseBody){
  
   loc = responseBody.savedLocations;
  nolocations = [{dayname:"No Locations Added"}];
-
-  if(responseBody.savedLocations.length == 0)
+console.log(loc);
+  if(responseBody.savedLocations == undefined || responseBody.savedLocations.length == 0 )
   {
     days = nolocations;
   }
+
 
   else
   {

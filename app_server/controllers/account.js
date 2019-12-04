@@ -58,7 +58,7 @@ const userSignUp = function(req, res){
   };
   request( requestOptions,(err, response, body) => {
   if (response.statusCode === 201) { 
-      console.log(response.body._id);
+      
   res.redirect(`/`); 
   } else { 
   _showError(req, res, response.statusCode); 

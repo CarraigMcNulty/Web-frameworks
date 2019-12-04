@@ -41,6 +41,7 @@ const usersReadOne = function (req, res) {
 
 const newUser = function(req, res){
   console.log(req.body.name);
+  console.log(req.body.password);
   Acc.create({
       name : req.body.name,
       password : req.body.password
