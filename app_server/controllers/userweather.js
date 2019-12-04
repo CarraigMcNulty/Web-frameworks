@@ -63,7 +63,6 @@ const userhome = function(req, res){
 
 
   request(requestOptions, (err, response, body) => {
-    console.log("b"); 
     if(response.statusCode === 200)
    {
       _renderHomepage(req, res ,body); 
