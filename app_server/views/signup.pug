@@ -15,30 +15,30 @@ block content
          tr
           td Name 
           td
-           input(name="name" type='text')
+           input(name="name" type='text' required)
          tr
           td Surname 
           td
-           input(name= "Sname" type='text')
+           input(name= "Sname" type='text' required )
          tr
           td 
             label Email 
           td
-           input(name= 'email' type='email')
+           input(name= 'email' type='email' required )
          tr
           td Password 
           td
-           input(type='password')
+           input(type='password' required)
          tr
           td Confirm Password 
           td
-           input(name= 'password'  type='password')
+           input(name= 'password'  type='password' required)
         .col.ml-2       
           p(style='text-align:center; margin-top:1em;')
             input(type='submit' value='Sign Up')
             br
             small(style='color:white;text-align:center;') Already signed up?
-            a.btn.disabled.col-12(style='color:white; text-decoration:underline;')(href='/login') Login
+            a.btn.col-12(style='color:white; text-decoration:underline;')(href='/login') Login
 
 
               

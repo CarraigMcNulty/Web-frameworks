@@ -42,8 +42,9 @@ const _showError = function (req, res, status) {
   content : content 
   }); 
   };
+  
 
-/* PUSH sing up page */
+/* PUSH sign up page */
 const userSignUp = function(req, res){ 
   const path = `/api/signup`; 
   const postdata = { 
@@ -57,7 +58,9 @@ const userSignUp = function(req, res){
       method : 'POST', 
       json : postdata 
   };
+
   request( requestOptions,(err, response, body) => {
+    console.log(response.statusCode + " this is code");
   if (response.statusCode === 201) { 
       
   res.redirect(`/`); 
